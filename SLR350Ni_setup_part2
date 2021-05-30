@@ -1,0 +1,13 @@
+#!/bin/bash
+# PART 2
+# [SOURCE] SLR350Ni user manual (see "https://github.com/yanniedog/AIS/blob/main/slr350ni.pdf")
+
+ls -l /dev
+echo ------------
+echo 'You should see a section above called called serial0 -> ttyS0. If not, there is a problem'
+sudo systemctl stop serial-getty@ttyS0.service
+sudo systemctl disable serial-getty@ttyS0.service
+echo 'In the next section, remove the text "console=serial0,115200", then save
+read -p "Press any key to continue ..."
+sudo nano /boot/cmdline.txt
+echo 'Now, reboot, and run SLR350Ni_setup_part3'
