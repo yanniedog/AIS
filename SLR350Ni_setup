@@ -1,8 +1,1 @@
-#!/bin/bash
-# [SOURCE] SLR350Ni user manual (see "https://github.com/yanniedog/AIS/blob/main/slr350ni.pdf")
-sudo mkdir /boot/backup
-sudo cp /boot/config.txt /boot/backup/config.bak
-sudo sh -c "echo ' ' >> /boot/config.txt"
-sudo sh -c "echo '# Appended by SLR350Ni_setup script by Yanniedog. Source: https://github.com/yanniedog/AIS/blob/main/SLR350Ni_setup' >> /boot/config.txt"
-sudo sh -c "echo '# Enable UART (enable ttys0) for the AIS receiver' >> /boot/config.txt"
-sudo sh -c "echo 'enable_uart=1' >> /boot/config.txt"
+
