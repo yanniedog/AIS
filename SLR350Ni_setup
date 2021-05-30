@@ -1,1 +1,13 @@
-
+#!/bin/bash
+# Quick-start
+# [SOURCE] SLR350Ni user manual (see "https://github.com/yanniedog/AIS/blob/main/slr350ni.pdf")
+sudo apt update && sudo apt -y full-upgrade && sudo apt autoremove -y && sudo apt dist-upgrade -y
+sudo apt install git
+sudo mkdir /home/pi/SLR350Ni-installer
+cd /home/pi/SLR350Ni-installer
+git clone https://github.com/yanniedog/AIS/blob/main/SLR350Ni_setup_part1
+git clone https://github.com/yanniedog/AIS/blob/main/SLR350Ni_setup_part2
+git clone https://github.com/yanniedog/AIS/blob/main/SLR350Ni_setup_part3
+sudo chmod +x https://github.com/yanniedog/AIS/blob/main/SLR350Ni_setup_part1
+sudo chmod +x https://github.com/yanniedog/AIS/blob/main/SLR350Ni_setup_part2
+sudo chmod +x https://github.com/yanniedog/AIS/blob/main/SLR350Ni_setup_part3
